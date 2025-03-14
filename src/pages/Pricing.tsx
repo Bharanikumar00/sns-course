@@ -83,7 +83,7 @@ const PricingPage: React.FC = () => {
         title="Find the Perfect Plan for"
         highlightedText="Your Organization"
         description="Choose from our flexible pricing options designed to fit the needs of organizations of all sizes. All plans include regular updates and new content."
-        variant="pricing"
+        variant="tertiary"
       >
         <a href="#pricing-plans" className="btn-primary">
           View Plans

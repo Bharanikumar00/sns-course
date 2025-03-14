@@ -15,7 +15,7 @@ const AIFeatures: React.FC = () => {
         title="Revolutionizing Education with"
         highlightedText="Artificial Intelligence"
         description="Discover how our AI-powered learning platform personalizes education, automates administrative tasks, and provides deep insights into learning patterns."
-        variant="gradient"
+        variant="quaternary"
       >
         <a href="#" className="btn-primary">
           Explore AI Features
