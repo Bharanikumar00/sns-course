@@ -144,4 +144,43 @@
       transform: rotate(0.0deg);
     }
   }
+  
+  /* Chat message typing animation */
+  .typing-dot {
+    @apply w-2 h-2 bg-primary rounded-full;
+    animation: blink 1.4s infinite both;
+  }
+  
+  .typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    20% {
+      opacity: 1;
+    }
+  }
+  
+  /* Chat message slide-up animation */
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out forwards;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
