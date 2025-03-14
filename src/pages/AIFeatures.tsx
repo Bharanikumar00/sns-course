@@ -61,7 +61,7 @@ const AIFeatures: React.FC = () => {
     // Simulate AI response after a delay
     setTimeout(() => {
       const aiResponse = {
-        content: generateResponse(),
+        content: generateEducationalResponse(),
         isUser: false
       };
       
@@ -70,9 +70,9 @@ const AIFeatures: React.FC = () => {
     }, 1500);
   };
 
-  // Function to generate movie recommendations based on user query
-  const generateResponse = () => {
-    return "Based on your preferences, here are some movie recommendations:\n\n1. **The Shawshank Redemption (1994)** - A powerful drama about hope and redemption. Perfect for those who enjoy character-driven stories with emotional depth.\n\n2. **Inception (2010)** - A mind-bending sci-fi thriller that challenges perception and reality. Ideal if you enjoy complex narratives and visual spectacles.\n\n3. **Parasite (2019)** - A genre-defying masterpiece that blends comedy, thriller, and social commentary. Great for viewers who appreciate innovative storytelling.\n\n4. **The Dark Knight (2008)** - A superhero film that transcends its genre with psychological depth and moral complexity.\n\n5. **Spirited Away (2001)** - A magical animated adventure with stunning visuals and a heartfelt story about courage and identity.\n\nWould you like more specific recommendations based on genre, mood, or era?";
+  // Function to generate educational content responses
+  const generateEducationalResponse = () => {
+    return "Here are some key learning resources and paths to explore:\n\n1. **Online Learning Platforms** - Coursera, edX, and Khan Academy offer comprehensive courses across various subjects with certificates upon completion.\n\n2. **Programming and Tech Skills** - For coding, try freeCodeCamp, Codecademy, or CS50 from Harvard. These platforms provide interactive lessons and projects.\n\n3. **Language Learning** - Duolingo and Babbel offer structured approaches to learning new languages through daily practice and immersion.\n\n4. **Critical Thinking & Logic** - Resources like Brilliant.org help develop problem-solving skills through interactive challenges in math and science.\n\n5. **Creative Skills** - Platforms like Skillshare specialize in creative fields including design, writing, and photography with project-based learning.\n\n6. **Self-Directed Study Techniques** - The Pomodoro Technique (25-minute focused sessions with short breaks) and spaced repetition can dramatically improve retention and productivity.\n\n7. **Academic Research** - Google Scholar and JSTOR provide access to academic papers and research for deeper understanding of specialized topics.\n\nWould you like more specific recommendations for any particular subject area or learning goal?";
   };
 
   return (
@@ -99,9 +99,9 @@ const AIFeatures: React.FC = () => {
       <section id="chat-section" className="py-16 w-full bg-gradient-to-b from-background to-muted">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="text-center mb-10 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-3">AI Movie Recommendation Chat</h2>
+            <h2 className="text-3xl font-bold mb-3">AI Education Assistant</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Get personalized movie recommendations based on your preferences. Just ask our AI assistant!
+              Get personalized learning resources and educational guidance. Just ask our AI assistant!
             </p>
           </div>
           
@@ -120,9 +120,9 @@ const AIFeatures: React.FC = () => {
                   ))}
                   {isProcessing && (
                     <div className="flex items-center space-x-2 px-4 py-2 rounded-lg w-fit bg-primary/10 self-start">
-                      <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-0"></div>
-                      <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-150"></div>
-                      <div className="w-2 h-2 bg-primary rounded-full animate-pulse delay-300"></div>
+                      <div className="typing-dot"></div>
+                      <div className="typing-dot"></div>
+                      <div className="typing-dot"></div>
                     </div>
                   )}
                   <div ref={messagesEndRef} />
@@ -138,7 +138,7 @@ const AIFeatures: React.FC = () => {
                   <Input
                     value={inputValue}
                     onChange={handleInputChange}
-                    placeholder="Ask about movie recommendations..."
+                    placeholder="Ask about learning resources or educational paths..."
                     className="flex-1 bg-background/50 border-primary/20 focus-visible:ring-primary"
                     disabled={isProcessing}
                   />
