@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, BookOpen, Users, Award, BarChart, Zap, PenTool, Target } from 'lucide-react';
@@ -8,19 +7,12 @@ import TestimonialCard from '@/components/TestimonialCard';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-
 const Home: React.FC = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navbar />
       
       {/* Hero Section */}
-      <HeroSection
-        badge="Corporate Learning Platform"
-        title="Elevate Your Workforce with"
-        highlightedText="Comprehensive Learning"
-        description="SNS Course offers a comprehensive online platform that empowers organizations with corporate training and professional development resources to enhance employee skills and drive performance."
-      >
+      <HeroSection badge="Corporate Learning Platform" title="Elevate Your Workforce with" highlightedText="Comprehensive Learning" description="SNS Course offers a comprehensive online platform that empowers organizations with corporate training and professional development resources to enhance employee skills and drive performance.">
         <Link to="/ai-features" className="btn-primary">
           Explore AI Features <ArrowRight className="ml-2 h-5 w-5" />
         </Link>
@@ -66,36 +58,12 @@ const Home: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <FeatureCard
-              title="Extensive Course Library"
-              description="Access thousands of courses across various domains including leadership, technical skills, and soft skills."
-              icon={BookOpen}
-            />
-            <FeatureCard
-              title="Team Collaboration"
-              description="Enable teams to learn together through collaborative features, discussion boards, and group projects."
-              icon={Users}
-            />
-            <FeatureCard
-              title="Certification Programs"
-              description="Offer industry-recognized certifications to help employees showcase their expertise and advance in their careers."
-              icon={Award}
-            />
-            <FeatureCard
-              title="Analytics Dashboard"
-              description="Track learning progress, completion rates, and performance metrics to measure the impact of training programs."
-              icon={BarChart}
-            />
-            <FeatureCard
-              title="Personalized Learning Paths"
-              description="Create customized learning journeys tailored to individual employee roles, skills gaps, and career aspirations."
-              icon={Target}
-            />
-            <FeatureCard
-              title="Rapid Course Creation"
-              description="Quickly develop custom courses with our intuitive authoring tools to address your organization's specific needs."
-              icon={PenTool}
-            />
+            <FeatureCard title="Extensive Course Library" description="Access thousands of courses across various domains including leadership, technical skills, and soft skills." icon={BookOpen} />
+            <FeatureCard title="Team Collaboration" description="Enable teams to learn together through collaborative features, discussion boards, and group projects." icon={Users} />
+            <FeatureCard title="Certification Programs" description="Offer industry-recognized certifications to help employees showcase their expertise and advance in their careers." icon={Award} />
+            <FeatureCard title="Analytics Dashboard" description="Track learning progress, completion rates, and performance metrics to measure the impact of training programs." icon={BarChart} />
+            <FeatureCard title="Personalized Learning Paths" description="Create customized learning journeys tailored to individual employee roles, skills gaps, and career aspirations." icon={Target} />
+            <FeatureCard title="Rapid Course Creation" description="Quickly develop custom courses with our intuitive authoring tools to address your organization's specific needs." icon={PenTool} />
           </div>
         </div>
       </section>
@@ -144,8 +112,8 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="order-1 md:order-2 bg-feature-gradient rounded-2xl overflow-hidden h-[500px] flex items-center justify-center p-8">
-              <div className="glass-card w-full max-w-md p-8 flex flex-col items-center text-center relative">
+            <div className="order-1 md:order-2 bg-feature-gradient rounded-2xl overflow-hidden h-[500px] flex items-center justify-center p-8 bg-indigo-400">
+              <div className="glass-card w-full max-w-md p-8 flex flex-col items-center text-center relative bg-indigo-500">
                 <div className="absolute -top-4 -right-4 bg-blue-purple-gradient rounded-full h-24 w-24 blur-2xl opacity-50"></div>
                 <div className="mb-6 rounded-full bg-white/10 p-4">
                   <BookOpen className="h-10 w-10 text-white" />
@@ -181,33 +149,9 @@ const Home: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <TestimonialCard
-              name="Rajiv Patel"
-              role="HR Director"
-              company="TechCorp India"
-              quote="SNS Course transformed our training programs. The platform is intuitive, the content is relevant, and the analytics help us track ROI effectively."
-              rating={5}
-              avatar="/placeholder.svg"
-              variant="dark"
-            />
-            <TestimonialCard
-              name="Priya Sharma"
-              role="L&D Manager"
-              company="Global Services Ltd"
-              quote="The personalized learning paths and skill gap analysis have been game-changers for our talent development strategy. Highly recommended!"
-              rating={5}
-              avatar="/placeholder.svg"
-              variant="dark"
-            />
-            <TestimonialCard
-              name="Vikram Singh"
-              role="CEO"
-              company="InnovaTech Solutions"
-              quote="We've seen a 40% increase in employee skill proficiency since implementing SNS Course. The platform's flexibility and comprehensive content are unmatched."
-              rating={5}
-              avatar="/placeholder.svg"
-              variant="dark"
-            />
+            <TestimonialCard name="Rajiv Patel" role="HR Director" company="TechCorp India" quote="SNS Course transformed our training programs. The platform is intuitive, the content is relevant, and the analytics help us track ROI effectively." rating={5} avatar="/placeholder.svg" variant="dark" />
+            <TestimonialCard name="Priya Sharma" role="L&D Manager" company="Global Services Ltd" quote="The personalized learning paths and skill gap analysis have been game-changers for our talent development strategy. Highly recommended!" rating={5} avatar="/placeholder.svg" variant="dark" />
+            <TestimonialCard name="Vikram Singh" role="CEO" company="InnovaTech Solutions" quote="We've seen a 40% increase in employee skill proficiency since implementing SNS Course. The platform's flexibility and comprehensive content are unmatched." rating={5} avatar="/placeholder.svg" variant="dark" />
           </div>
           
           <div className="mt-12 text-center">
@@ -221,21 +165,11 @@ const Home: React.FC = () => {
       {/* Call to Action */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
-          <CallToAction
-            title="Ready to Transform Your Corporate Learning?"
-            description="Join thousands of organizations that are revolutionizing their training programs with SNS Course."
-            primaryButtonText="Get Started"
-            primaryButtonLink="/pricing"
-            secondaryButtonText="Book a Demo"
-            secondaryButtonLink="#"
-            variant="gradient"
-          />
+          <CallToAction title="Ready to Transform Your Corporate Learning?" description="Join thousands of organizations that are revolutionizing their training programs with SNS Course." primaryButtonText="Get Started" primaryButtonLink="/pricing" secondaryButtonText="Book a Demo" secondaryButtonLink="#" variant="gradient" />
         </div>
       </section>
       
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
