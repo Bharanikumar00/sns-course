@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Book, BookOpen, BookText, GraduationCap } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
@@ -22,7 +21,7 @@ const coursesData = [
     id: 1,
     title: 'Complete Web Development Bootcamp',
     description: 'Learn HTML, CSS, JavaScript, React, Node.js and more to become a full-stack web developer',
-    image: '/programming.jpg',
+    image: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
     category: 'programming',
     duration: '12 weeks',
     level: 'Beginner to Intermediate',
@@ -36,7 +35,7 @@ const coursesData = [
     id: 2,
     title: 'Data Science Fundamentals',
     description: 'Master data analysis, visualization, and machine learning with Python and popular libraries',
-    image: '/data-science.jpg',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
     category: 'data-science',
     duration: '10 weeks',
     level: 'Intermediate',
@@ -50,7 +49,7 @@ const coursesData = [
     id: 3,
     title: 'UX/UI Design Masterclass',
     description: 'Create stunning user interfaces and seamless user experiences with industry-standard tools',
-    image: '/design.jpg',
+    image: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
     category: 'design',
     duration: '8 weeks',
     level: 'All Levels',
@@ -64,7 +63,7 @@ const coursesData = [
     id: 4,
     title: 'Business Management & Leadership',
     description: 'Develop essential management skills to lead teams and drive business growth',
-    image: '/business.jpg',
+    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
     category: 'business',
     duration: '6 weeks',
     level: 'Intermediate to Advanced',
@@ -78,7 +77,7 @@ const coursesData = [
     id: 5,
     title: 'Advanced JavaScript Patterns',
     description: 'Take your JavaScript skills to the next level with advanced patterns and techniques',
-    image: '/advanced-js.jpg',
+    image: 'https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
     category: 'programming',
     duration: '8 weeks',
     level: 'Advanced',
@@ -92,7 +91,7 @@ const coursesData = [
     id: 6,
     title: 'Machine Learning Engineering',
     description: 'Build and deploy machine learning models with Python, TensorFlow, and PyTorch',
-    image: '/machine-learning.jpg',
+    image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80',
     category: 'data-science',
     duration: '14 weeks',
     level: 'Advanced',
