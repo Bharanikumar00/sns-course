@@ -92,7 +92,7 @@ const coursesData = [
     id: 6,
     title: 'Machine Learning Engineering',
     description: 'Build and deploy machine learning models with Python, TensorFlow, and PyTorch',
-    image: '/data-science.jpg',
+    image: '/machine-learning.jpg',
     category: 'data-science',
     duration: '14 weeks',
     level: 'Advanced',
