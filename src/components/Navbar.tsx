@@ -1,7 +1,9 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, LogOut } from 'lucide-react';
+import { Menu, X, LogOut, Book } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -10,6 +12,7 @@ const Navbar: React.FC = () => {
     logout
   } = useAuth();
   const location = useLocation();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -21,13 +24,17 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
   if (!isLoggedIn) return null;
+
   const navigationLinks = [{
     name: "Home",
     path: "/home"
@@ -41,9 +48,13 @@ const Navbar: React.FC = () => {
     name: "Pricing",
     path: "/pricing"
   }, {
+    name: "Courses",
+    path: "/courses"
+  }, {
     name: "AI Features",
     path: "/ai-features"
   }];
+
   return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-lg shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 md:px-6 py-4 bg-gray-50">
         <div className="flex justify-between items-center">
@@ -86,4 +97,5 @@ const Navbar: React.FC = () => {
       </div>
     </nav>;
 };
+
 export default Navbar;

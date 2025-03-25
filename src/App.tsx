@@ -13,6 +13,7 @@ import NotFound from "./pages/NotFound";
 import AIFeatures from "./pages/AIFeatures";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Pricing from "./pages/Pricing";
+import Courses from "./pages/Courses";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,11 @@ const App = () => (
             <Route path="/pricing" element={
               <ProtectedRoute>
                 <Pricing />
+              </ProtectedRoute>
+            } />
+            <Route path="/courses" element={
+              <ProtectedRoute>
+                <Courses />
               </ProtectedRoute>
             } />
             <Route path="/ai-features" element={
