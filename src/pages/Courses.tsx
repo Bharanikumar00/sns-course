@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Book, BookOpen, BookText, GraduationCap, Image } from 'lucide-react';
+import { Book, BookOpen, BookText, GraduationCap } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -92,7 +92,7 @@ const coursesData = [
     id: 6,
     title: 'Machine Learning Engineering',
     description: 'Build and deploy machine learning models with Python, TensorFlow, and PyTorch',
-    image: '/machine-learning.jpg',
+    image: '/data-science.jpg',
     category: 'data-science',
     duration: '14 weeks',
     level: 'Advanced',
@@ -115,9 +115,11 @@ const CourseCard = ({ course }: { course: typeof coursesData[0] }) => {
           </div>
         )}
         <AspectRatio ratio={16 / 9}>
-          <div className="w-full h-full bg-muted flex items-center justify-center overflow-hidden">
-            <Image className="w-12 h-12 text-muted-foreground" />
-          </div>
+          <img 
+            src={course.image} 
+            alt={course.title}
+            className="object-cover w-full h-full"
+          />
         </AspectRatio>
       </div>
       <CardHeader className="pb-2">

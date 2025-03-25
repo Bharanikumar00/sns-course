@@ -25,7 +25,7 @@ const PricingPage: React.FC = () => {
   const plans: PricingPlan[] = [
     {
       name: "Starter",
-      price: "₹29,999",
+      price: "₹5,999",
       description: "Perfect for small teams just getting started with corporate training.",
       features: [
         { text: "Access to 500+ courses", included: true },
@@ -41,7 +41,7 @@ const PricingPage: React.FC = () => {
     },
     {
       name: "Professional",
-      price: "₹79,999",
+      price: "₹9,999",
       description: "Ideal for growing organizations with advanced learning needs.",
       features: [
         { text: "Access to 2,000+ courses", included: true },
